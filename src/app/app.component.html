@@ -25,3 +25,18 @@
 <ng-template #noCourses>
     No courses yet
 </ng-template>
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode == 'map' " (click)="viewMode = 'map'" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Map View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode == 'list' " (click)="viewMode = 'list'" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">List View</a>
+    </li>
+    
+  </ul>
+  <div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View </div>
+    <div *ngSwitchCase="'list'">List View</div>
+    <div *ngSwitchDefault>OtherWise</div>
+  </div>
