@@ -39,4 +39,12 @@
     <div *ngSwitchCase="'map'">Map View </div>
     <div *ngSwitchCase="'list'">List View</div>
     <div *ngSwitchDefault>OtherWise</div>
-  </div>
+  </div>      
+  
+  <br>
+
+  <ul>
+    <li *ngFor="let course of courselist;index as i">
+      {{i+1}} {{ course }}
+    </li>
+  </ul>
