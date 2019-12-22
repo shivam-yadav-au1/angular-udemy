@@ -26,4 +26,12 @@ export class AppComponent {
   onFavoriteChange(eventArgs:FavoriteChangedEventArgs){
     console.log("Favorite changed ...",eventArgs);
   }
+
+  onAdd(){
+    this.courselist.push("course5")
+  }
+  onRemove(course){
+    let index = this.courselist.indexOf(course);
+    this.courselist.splice(index,1);
+  }
 }

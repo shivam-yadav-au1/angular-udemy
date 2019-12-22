@@ -42,9 +42,10 @@
   </div>      
   
   <br>
-
+<button (click)="onAdd()">Add</button>
   <ul>
     <li *ngFor="let course of courselist;index as i">
       {{i+1}} {{ course }}
+      <button (click)="onRemove(course)">Remove</button>
     </li>
   </ul>
